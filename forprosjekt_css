@@ -1,0 +1,60 @@
+body {
+	background-color: #FAFAFA;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+header {
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#prototype {
+
+	float: left;
+}
+
+#skisse {
+	float: right;
+}
+
+#contact {
+	text-align: center;
+	padding-bottom: 35%;
+	padding-top: 35%;
+}
+
+#footer {
+	width: 100%;
+	height: 2.5em;
+	background-color: #FAFAFA;	
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.article-headline {
+	font-size: 1.5em;
+	border-bottom: 2px solid black;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	border-bottom: 2px solid black;
+}
+
+img {
+	height: 500px;
+	width: auto;		
+}
