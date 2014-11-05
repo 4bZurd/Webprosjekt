@@ -5,53 +5,69 @@
 			World War 2 in Europe
 		</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="styles/test2.css" />
-		<script src="scripts/test2.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="styles/default.css" />
+		<script src="scripts/default.js" type="text/javascript"></script>
+		<script src="scripts/onload.js" type="text/javascript"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 		<!-- any other meta tags go here -->
 	</head>
 	<body onload="hideScroll()">
-	<header>
-	<span id="headertext"></span>
-	</header>
-	<nav>
-	<a class="navbutton" href="#">
-	Prologue
-	</a>
-	<a class="navbutton" href="#">
-	1939
-	</a>
-	<a class="navbutton" href="#">
-	1940
-	</a>
-	<a class="navbutton" href="#">
-	1941
-	</a>
-	<a class="navbutton" href="#">
-	1942
-	</a>
-	<a class="navbutton" href="#">
-	1943
-	</a>
-	<a class="navbutton" href="#">
-	1944
-	</a>
-	<a class="navbutton" href="#">
-	1945
-	</a>
-	<a class="navbutton" href="#">
-	Aftermath
-	</a>
-	</nav>
-	<img id="map" src="images/prologue.png" />
-	<div id="scrollnorth">
-	</div>
-	<div id="scrolleast">
-	</div>
-	<div id="scrollsouth">
-	</div>
-	<div id="scrollwest">
-	</div>
+		<header>
+			<span id="headertext">
+			</span>
+		</header>
+		<nav>
+			<a class="navbutton" href="index.html">
+				Prologue
+			</a>
+			<a class="navbutton" href="1939.html">
+				1939
+			</a>
+			<a class="navbutton" href="1940.html">
+				1940
+			</a>
+			<a class="navbutton" href="1941.html">
+				1941
+			</a>
+			<a class="navbutton" href="1942.html">
+				1942
+			</a>
+			<a class="navbutton" href="1943.html">
+				1943
+			</a>
+			<a class="navbutton" href="1944.html">
+				1944
+			</a>
+			<a class="navbutton" href="1945.html">
+				1945
+			</a>
+			<a class="navbutton" href="aftermath.html">
+				Aftermath
+			</a>
+		</nav>
+		<img id="map" src="images/prologue.png" />
+		<a onmousedown="movenorth(100)">
+			<div id="scrollnorth" align="center">
+				<img class="scrollarrow" src="images/arrownorth.png" alt="arrow pointing north, enabling scrolling up/north on the map">
+			</div>
+		</a>
+		<a onclick="moveeast(100)" onmouseover="">
+			<div id="scrolleast">
+				<div class="heightuser"></div>
+				<img src="images/arroweast.png" alt="arrow pointing east, enabling scrolling right/east on the map">
+			</div>
+		</a>
+		<a onmousedown="movesouth(100)" >
+			<div id="scrollsouth" align="center">
+				<img src="images/arrowsouth.png" alt="arrow pointing south, enabling scrolling down/south on the map">
+			</div>
+		</a>
+		<a onclick="movewest(100)" onmouseover="">
+			<div id="scrollwest">
+				<img src="images/arrowwest.png" alt="arrow pointing east, enabling scrolling left/west on the map">
+				<div class="heightuser"></div>
+			</div>
+		</a>
 	</body>
-	</html>
+</html>
