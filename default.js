@@ -1,20 +1,35 @@
-function hideScroll() {
-	document.body.style.overflow = "Hidden";
-	document.getElementById("scrollnorth").style.display = "inline";
-	document.getElementById("scrollsouth").style.display = "inline";
-	document.getElementById("scrolleast").style.display = "inline";
-	document.getElementById("scrollwest").style.display = "inline";
-	}
-	
-var x = 0; /* Definerer posisjon i øst/vest retning (x-aksen) */
-var y = 0; /* Definerer posisjon i nord/sør retning (y-aksen) */
+var x = 0; 
+var y = 0; 
 
-var offsetX = window.width - bredde på kart
-var offsetY = window.height - høyde på kart
+var offsetX = 2560 - window.width;
+var offsetY = 2223 - window.height;
 
 function movenorth(multiplier) {
-  if (x >= 0 || x <= offsetX ) {
-		x = (multiplier * 1);
+  if ( y <= 0 && y <= !offsetY ) {
+		y = (y + multiplier * -1);
   }
-  document.getElementById("map").style.top = parseFloat(document.getElementById("map").style.top) + x + "em";
+  document.getElementById("map").style.top = y + "px";
+}
+
+function movesouth(multiplier) {
+  if ( y < 0 ) {
+		y = (y + multiplier);
+  }
+  document.getElementById("map").style.top = y + "px";
+}
+
+function moveeast(multiplier) {
+	if ( x <= 0 ) {
+		x = (x + multiplier * -1);
+	}
+	document.getElementById("map").style.left = x + "px";
+}
+
+function movewest(multiplier) {
+	if ( x < 0  ) {
+		x = ( x + multiplier );
+	}
+	document.getElementById("map").style.left = x + "px";
 } 
+
+
